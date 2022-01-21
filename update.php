@@ -1,10 +1,9 @@
 <?php
 require_once '../php/config/connect.php';
 $feedback_id = $_GET['id'];
-
 $user = mysqli_query($connect, "SELECT * FROM `feedback` WHERE `id`='$feedback_id'");
 $user = mysqli_fetch_assoc($user);
-print_r($user)
+
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +50,6 @@ print_r($user)
                     <button type="submit" class="btn btn-primary">изменить</button>
                     </form>
                 </div>
-
             </div>
         </div>
     </div>

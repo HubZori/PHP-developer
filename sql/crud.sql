@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Янв 21 2022 г., 17:44
+-- Время создания: Янв 21 2022 г., 23:19
 -- Версия сервера: 8.0.24
 -- Версия PHP: 7.1.33
 
@@ -35,14 +35,6 @@ CREATE TABLE `feedback` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Дамп данных таблицы `feedback`
---
-
-INSERT INTO `feedback` (`id`, `email`, `phone`, `name`) VALUES
-(1, 'babayan@mail.ru', '+79264188508', '12344'),
-(2, 'daasfsd@mail.ru', '234445552343', 'dsfassada');
-
---
 -- Индексы сохранённых таблиц
 --
 
@@ -60,7 +52,7 @@ ALTER TABLE `feedback`
 -- AUTO_INCREMENT для таблицы `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
