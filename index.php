@@ -39,7 +39,7 @@ $feedback = mysqli_fetch_all($feedback);
 								<td><?= $item[2] ?></td>
 								<td><?= $item[3] ?></td>
 								<td>
-									<a href="?edit" class="btn btn-success btn-sm" data-toggle="modal" data-target="#editModal"><i class="fa fa-edit"></i></a>
+									<a href="/update.php?id=<?= $item[0] ?>" class="btn btn-success btn-sm" data-target="#editModal"><i class="fa fa-edit"></i></a>
 									<a href="?delete" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-trash"></i></a>
 								</td>
 							</tr>
