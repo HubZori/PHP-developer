@@ -1,6 +1,6 @@
 <?php
 
-require_once '../php/config/connect.php';
+require_once '../PHP-developer/config/connect.php';
 $feedback = mysqli_query($connect, "SELECT * FROM `feedback`");
 $feedback = mysqli_fetch_all($feedback);
 

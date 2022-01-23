@@ -1,5 +1,5 @@
 <?php
-require_once '../php/config/connect.php';
+require_once '../PHP-developer/config/connect.php';
 $feedback_id = $_GET['id'];
 $user = mysqli_query($connect, "SELECT * FROM `feedback` WHERE `id`='$feedback_id'");
 $user = mysqli_fetch_assoc($user);
