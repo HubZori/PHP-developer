@@ -1,9 +1,7 @@
 <?php
-
 require_once '../PHP-developer/config/connect.php';
 $feedback = mysqli_query($connect, "SELECT * FROM `feedback`");
 $feedback = mysqli_fetch_all($feedback);
-
 ?>
 
 <!DOCTYPE html>
@@ -13,22 +11,25 @@ $feedback = mysqli_fetch_all($feedback);
 	<meta charset="UTF-8">
 	<title>Тестовое задание</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="/index.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
 </head>
 
 <body>
+
 	<div class="container">
 		<div class="row">
 			<div class="col-12 mt-1">
-				<button class="btn btn-success mb-1" data-toggle="modal" data-target="#create"><i>оставить заявку</i></button>
+				<button class="btn btn-success mb-5 " style="position:relative; top:10%; left:40%;" data-toggle="modal" data-target="#create"><i>оставить заявку</i></button>
+				<button data-toggle="modal" data-target="#createe" type="button" class="btn btn " style=" position:absolute; right:15px; top:0px;">
+					<a href="/rootUser/admin.php">Admin</a></button>
 				<table class="table shadow ">
 					<thead class="thead-dark">
 						<th>ID</th>
 						<th>Email</th>
 						<th>Phone</th>
 						<th>Name</th>
-						<th>Action</th>
 					</thead>
 					<tbody>
 						<?php
@@ -39,10 +40,6 @@ $feedback = mysqli_fetch_all($feedback);
 								<td><?= $item[1] ?></td>
 								<td><?= $item[2] ?></td>
 								<td><?= $item[3] ?></td>
-								<td>
-									<a href="/update.php?id=<?= $item[0] ?>" class="btn btn-success btn-sm" data-target="#editModal"><i class="fa fa-edit"></i></a>
-									<a href="/crud/delete.php?id=<?= $item[0] ?>" class="btn btn-danger btn-sm" data-target="#deleteModal"><i class="fa fa-trash"></i></a>
-								</td>
 							</tr>
 						<?php
 						}
@@ -52,6 +49,9 @@ $feedback = mysqli_fetch_all($feedback);
 			</div>
 		</div>
 	</div>
+
+	<!-- модель обратной связи начало-->
+
 	<div class="modal fade" tabindex="-1" role="dialog" id="create">
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content shadow">
@@ -62,7 +62,7 @@ $feedback = mysqli_fetch_all($feedback);
 					</button>
 				</div>
 				<div class="modal-body">
-					<form action="crud/create.php" method="post">
+					<form action="create.php" method="post">
 						<div class="form-group">
 							<small>Email</small>
 							<input type="email" class="form-control" name="email" value="" placeholder="email" required="1">
@@ -86,6 +86,9 @@ $feedback = mysqli_fetch_all($feedback);
 
 		</div>
 	</div>
+
+	<!-- модель обратной связи конец-->
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
