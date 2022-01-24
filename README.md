@@ -1,6 +1,10 @@
 ﻿# PHP-developer
 ![](https://img.shields.io/badge/php-%5E7.1.3-blue) ![](https://img.shields.io/badge/MySQL-PHPMyAdmin%20v5.1.1-yellow) ![](https://img.shields.io/badge/Open%20Server%20Panel%20-v5.4.1-blue)
 
+!!!!|ADMIN LOGIN|!!!! <br> 
+user: root <br>
+password 123123
+<br> <br>
 |ПОДКЛЮЧЕНИЕ MySQL|
 <ul>
   <li>Откройте [Меню → Дополнительно → PHPMyAdmin]</li>
